@@ -8,17 +8,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class ManagerOfPosterTest {
     ManagerOfPoster manager = new ManagerOfPoster();
 
-    Film first = new Film(101, 1, "First", 1);
-    Film second = new Film(201, 2, "Second", 1);
-    Film third = new Film(301, 2, "Third", 1);
-    Film four = new Film(401, 4, "Four", 1);
-    Film five = new Film(501, 5, "Five", 1);
-    Film six = new Film(601, 6, "Six", 1);
-    Film seven = new Film(701, 7, "Seven", 1);
-    Film eight = new Film(801, 8, "Eight", 1);
-    Film nine = new Film(901, 9, "Nine", 1);
-    Film ten = new Film(111, 10, "Ten", 1);
-    Film eleven = new Film(121, 11, "Eleven", 1);
+    Film first = new Film(101, 1, "First");
+    Film second = new Film(201, 2, "Second");
+    Film third = new Film(301, 2, "Third");
+    Film four = new Film(401, 4, "Four");
+    Film five = new Film(501, 5, "Five");
+    Film six = new Film(601, 6, "Six");
+    Film seven = new Film(701, 7, "Seven");
+    Film eight = new Film(801, 8, "Eight");
+    Film nine = new Film(901, 9, "Nine");
+    Film ten = new Film(111, 10, "Ten");
+    Film eleven = new Film(121, 11, "Eleven");
 
 
     @Test
@@ -43,7 +43,7 @@ class ManagerOfPosterTest {
 
     @Test
     void getOneFilmTen() {
-        Film first = new Film(101, 1, "First", 10);
+        Film first = new Film(101, 1, "First");
         manager.addFilm(first);
         Film[] expected = manager.getFilms();
         Film[] actual = new Film[]{first};

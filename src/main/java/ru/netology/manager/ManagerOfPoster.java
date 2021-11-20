@@ -1,14 +1,18 @@
 package ru.netology.manager;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import ru.netology.domain.Film;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 
 public class ManagerOfPoster {
 
-
-    public ManagerOfPoster() {
-    }
-
     private Film[] films = new Film[0];
+    private int count = 10;
 
 
     public void addFilm(Film film) {
