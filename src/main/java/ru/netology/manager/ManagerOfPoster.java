@@ -5,15 +5,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.netology.domain.Film;
 
-@NoArgsConstructor
-@AllArgsConstructor
 @Data
 
 public class ManagerOfPoster {
 
     private Film[] films = new Film[0];
-    private int count = 10;
+    private int limit = 10;
 
+    public ManagerOfPoster() {
+    }
+
+    public ManagerOfPoster(int limit) {
+        this.limit = limit;
+    }
 
     public void addFilm(Film film) {
         int length = films.length + 1;
