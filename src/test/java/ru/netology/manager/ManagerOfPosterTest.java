@@ -91,4 +91,22 @@ class ManagerOfPosterTest {
         Film[] actual = new Film[]{eleven, ten, nine, eight, seven, six, five, four, third, second};
         assertArrayEquals(expected, actual);
     }
+    @Test
+    void shouldGetElevenFilms() {
+        ManagerOfPoster manager = new ManagerOfPoster(11);
+        manager.addFilm(first);
+        manager.addFilm(second);
+        manager.addFilm(third);
+        manager.addFilm(four);
+        manager.addFilm(five);
+        manager.addFilm(six);
+        manager.addFilm(seven);
+        manager.addFilm(eight);
+        manager.addFilm(nine);
+        manager.addFilm(ten);
+        manager.addFilm(eleven);
+        Film[] expected = manager.getFilms();
+        Film[] actual = new Film[]{eleven, ten, nine, eight, seven, six, five, four, third, second, first};
+        assertArrayEquals(expected, actual);
+    }
 }

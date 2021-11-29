@@ -30,8 +30,8 @@ public class ManagerOfPoster {
 
     public Film[] getFilms() {
         int resultLength;
-        if (films.length >= 10) {
-            resultLength = 10;
+        if (films.length >= limit) {
+            resultLength = limit;
         } else {
             resultLength = films.length;
         }
